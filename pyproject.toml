@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "payment-service"
+version = "0.1.0"
+description = "Microserviço de pagamento"
+authors = ["magnifficco.io"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.110.0"  # Framework web
+uvicorn = "^0.27.1"  # Servidor ASGI
+pymongo = "^4.7.0"  # Driver MongoDB
+motor = "^3.3.2"  # Driver assíncrono para MongoDB
+python-dotenv = "^1.0.1"  # Gerenciar variáveis de ambiente
+requests = "^2.31.0"  # Requisições HTTP
+mercadopago = "^2.0.6"  # SDK MercadoPago
+loguru = "^0.7.2"  # Logging avançado
+qrcode = "^8.0"
+pillow = "^11.1.0"
+pytest = "^8.3.4"
+httpx = "^0.28.1"
+pytest-dotenv = "^0.5.2"
+mongomock = "^4.3.0"
+pyjwt = "^2.10.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
