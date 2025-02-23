@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-service
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: payment-service
+          image: app/app/tc-payment-service:0.0.1
+          env:
+            - name: ENVIRONMENT
+              value: "production"
