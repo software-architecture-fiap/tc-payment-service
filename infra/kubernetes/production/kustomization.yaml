@@ -1,0 +1,19 @@
+namespace: production
+
+resources:
+  - ../base
+
+patches:
+  - path: patch-deployment.yaml
+    target:
+      kind: Deployment
+      name: payment-service
+  - path: patch-configmap.yaml
+    target:
+      kind: ConfigMap
+      name: payment-service-config
+
+images:
+  - name: app/tc-payment-service
+    newName: 147671223315.dkr.ecr.us-east-1.amazonaws.com/app/tc-payment-service
+    newTag: latest
